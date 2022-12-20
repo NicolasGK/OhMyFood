@@ -50,7 +50,8 @@ body{
 }
 
 .style-enchantee > .section-menu{
-    height: 1400px;
+    height: 100%;
+    padding-bottom: 100px;
     background-color: rgb(251, 251, 251);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
@@ -62,8 +63,13 @@ body{
     align-items: center;
 }
 
+.style-enchantee .entree-plat-dessert{
+    align-items: flex-start;
+}
+
 .style-francaise > .section-menu{
-    height: 1300px;
+    height: 100%;
+    padding-bottom: 100px;
     background-color: rgb(251, 251, 251);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
@@ -114,6 +120,36 @@ body{
     cursor: pointer;
 }
 
+.entree-plat-dessert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 50px;
+}
+
+.entree{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+
+.plat{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+
+.dessert{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+}
+
 hr{
     width: 40px;
     margin-left: 5%;
@@ -157,6 +193,9 @@ h2{
     0% {
         transform: rotate(0deg);
     }
+    50%{
+        margin-top: -7.8px;
+    }
     100% {
         transform: rotate(360deg);
     }
@@ -169,7 +208,7 @@ h2{
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     width: 20%;
-    margin-right: 0px;
+    margin-right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,6 +228,7 @@ h2{
     animation: spin 1.2s ease-in-out;
     animation-play-state: paused;
 }
+
 .container-entrees-1 .tartare{
     min-width: 99%;
     overflow: hidden;
@@ -268,6 +308,34 @@ h2{
     text-decoration: none;
     color: black;
 }
+.container-entrees-2 .texte-price{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.container-entrees-2 .tartare{
+    min-width: 99%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease-in;
+}
+.container-entrees-2 .tartare:hover{
+    min-width: 80%;
+}
+.container-entrees-2:hover .check-picto{
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation: spin .7s ease-in-out;
+    animation-play-state: running;
+}
+.container-entrees-2 .check:hover{
+    animation: spin 2s ease-in-out;
+}
+.container-entrees-2 .check-picto:hover{
+    animation: spin 2s ease-in-out;
+}
 
 .container-entrees-3{
     width: 90%;
@@ -286,11 +354,28 @@ h2{
     color: black;
 }
 
-/* .tartare{
-    width: 100%;
-    padding: 5px 15px;
-    line-height: 0px;
-} */
+.container-entrees-3 .tartare{
+    min-width: 99%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease-in;
+}
+.container-entrees-3 .tartare:hover{
+    min-width: 80%;
+}
+.container-entrees-3:hover .check-picto{
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation: spin .7s ease-in-out;
+    animation-play-state: running;
+}
+.container-entrees-3 .check:hover{
+    animation: spin 2s ease-in-out;
+}
+.container-entrees-3 .check-picto:hover{
+    animation: spin 2s ease-in-out;
+}
 
 .tartare p{
     font-size: 18px;
@@ -304,12 +389,11 @@ h2{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-right: 40px;
+    margin-right: 28px;
 }
-
 .texte-price p{
     margin: 8px 0 15px 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .button-bot button{
@@ -367,10 +451,435 @@ h2{
     text-decoration: none;
 }
 
-@media (min-width:768px) and (max-width:992px){
-
-}
-
-@media (min-width:993px) and (max-width:767px){
+@media (max-width:1100px){
+    html{
+        scroll-behavior: smooth;
+    }
     
+    body{
+        font-family: 'roboto';
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .header img{
+        width: 200px;
+    }
+    
+    .logo-header{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 10px 1px rgb(46, 46, 46);
+        z-index: 99;
+    }
+    
+    .logo-header svg{
+        height: 25px;
+        position: absolute;
+        left: 30px;
+        top: 23px;
+    }
+    
+    .intro{
+        width: 100%;
+    }
+    
+    .intro img{
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    
+    .style-enchantee > .section-menu{
+        height: 100%;
+        padding-bottom: 100px;
+        background-color: rgb(251, 251, 251);
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        margin-top: -60px;
+        z-index: 100;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .style-enchantee .entree-plat-dessert{
+        align-items: center;
+    }
+    
+    .style-francaise > .section-menu{
+        height: 100%;
+        padding-bottom: 100px;
+        background-color: rgb(251, 251, 251);
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        margin-top: -60px;
+        z-index: 100;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-menu > .top-menu{
+        font-family: 'Shrikhand';
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding-top: 40px;
+        width: 90%;
+    }
+    
+    .top-menu h1{
+        font-size: 25px;
+        margin: 0;
+    }
+    
+    .top-menu svg{
+        height: 30px;
+    }
+    
+    .top-menu > div{
+        width: 24px;
+        height: 24px; 
+        background: #3e3e3e; 
+        clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+        transform: scale(1);
+        transition: all 0.2s ease;
+        margin-right: 10px;
+    }
+    
+    .top-menu > div:hover{
+        width: 24px;
+        height: 24px; 
+        background: linear-gradient(292deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%); 
+        clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+        transform: scale(1.2);
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    .entree-plat-dessert{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    hr{
+        width: 60px;
+        margin-left: 5%;
+        height: 2px;
+        background-color: #99E2D0;
+        border: none;
+        margin-top: -10px;
+        display: inline;
+    }
+    
+    h2{
+        font-weight: 200;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 40px;
+        display: flex;
+        width: 90%;
+    }
+    
+    @keyframes apparition {
+        100% {
+            opacity: 1;
+            transform: none;
+            }
+    }
+    
+    @keyframes apparition-2 {
+        100% {
+            opacity: 1;
+            transform: none;
+            }
+    }
+    
+    @keyframes apparition-3 {
+        100% {
+            opacity: 1;
+            transform: none;
+            }
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        50%{
+            margin-top: -7.8px;
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+      }
+    
+    
+    
+    .check{
+        background-color: #99E2D0;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 20%;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        animation-duration: 1s;
+        animation: spin 1s ease-in-out both;
+    }
+    .check:hover{
+        animation-fill-mode: forwards; 
+        transform: rotate(180deg);
+    }
+    .check svg{
+        height: 40px;
+        fill: white;
+        animation: spin 1.2s ease-in-out;
+        animation-play-state: paused;
+    }
+    
+    .container-entrees-1 .tartare{
+        min-width: 99%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease-in;
+    }
+    .container-entrees-1 .tartare:hover{
+        min-width: 80%;
+    }
+    .container-entrees-1:hover .check-picto{
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation: spin .7s ease-in-out;
+        animation-play-state: running;
+    }
+    .container-entrees-1 .check:hover{
+        animation: spin 2s ease-in-out;
+    }
+    .container-entrees-1 .check-picto:hover{
+        animation: spin 2s ease-in-out;
+    }
+    .tartare{
+        width: 100%;
+        padding: 10px;
+        line-height: 0px;
+    }
+    
+    
+    
+    
+    
+    
+    .container-entrees-1{
+        width: 90%;
+        background-color: #FFF;
+        box-shadow: 1px 1px 10px 1px rgb(232, 232, 232);
+        border-radius: 15px;
+        display: flex;
+        margin: 15px 0 0 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: apparition 0.4s 1.2s ease-out forwards;
+        overflow: hidden;
+    } 
+    /* 
+    .container-entrees-1 .tartare{
+        max-width: 100%;
+        overflow: hidden;
+    } */
+    /* 
+    .check{
+        font-size: 3rem;
+        color: white;
+        transform: rotate(360deg);
+        transition: 0.4s ease-in-out;
+    } */
+    
+    .container-entrees-1 a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .container-entrees-2{
+        width: 90%;
+        background-color: #FFF;
+        box-shadow: 1px 1px 10px 1px rgb(232, 232, 232);
+        border-radius: 15px;
+        display: flex;
+        margin: 15px 0 0 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: apparition 0.4s 1.5s ease-out forwards;
+    } 
+    
+    .container-entrees-2 a{
+        text-decoration: none;
+        color: black;
+    }
+    .container-entrees-2 .texte-price{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    .container-entrees-2 .tartare{
+        min-width: 99%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease-in;
+    }
+    .container-entrees-2 .tartare:hover{
+        min-width: 80%;
+    }
+    .container-entrees-2:hover .check-picto{
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation: spin .7s ease-in-out;
+        animation-play-state: running;
+    }
+    .container-entrees-2 .check:hover{
+        animation: spin 2s ease-in-out;
+    }
+    .container-entrees-2 .check-picto:hover{
+        animation: spin 2s ease-in-out;
+    }
+    
+    .container-entrees-3{
+        width: 90%;
+        background-color: #FFF;
+        box-shadow: 1px 1px 10px 1px rgb(232, 232, 232);
+        border-radius: 15px;
+        display: flex;
+        margin: 15px 0 0 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: apparition 0.4s 1.8s ease-out forwards;
+    }
+    
+    .container-entrees-3 a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .container-entrees-3 .tartare{
+        min-width: 99%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease-in;
+    }
+    .container-entrees-3 .tartare:hover{
+        min-width: 80%;
+    }
+    .container-entrees-3:hover .check-picto{
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation: spin .7s ease-in-out;
+        animation-play-state: running;
+    }
+    .container-entrees-3 .check:hover{
+        animation: spin 2s ease-in-out;
+    }
+    .container-entrees-3 .check-picto:hover{
+        animation: spin 2s ease-in-out;
+    }
+    
+    .tartare p{
+        font-size: 18px;
+    }
+    
+    .texte-price{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-weight: 200;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-right: 28px;
+    }
+    .texte-price p{
+        margin: 8px 0 15px 0;
+        font-size: 14px;
+    }
+    
+    .button-bot button{
+        background: linear-gradient(180deg, #FF79DA 0%, transparent) #9356DC;
+        box-shadow: 1px 1px 10px 1px rgb(204, 204, 204);
+        color: #FFF;
+        border: none;
+        padding: 20px 60px;
+        border-radius: 50px;
+        font-size: 22px;
+        margin-top: 20px;
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        margin-top: 60px;
+    }
+    
+    .button-bot button:hover, .button-bot button:focus{
+        background-color: #ff79d9b9;
+        box-shadow: 3px 3px 10px 3px rgb(181, 181, 181);
+        color: #fff;
+    }
+    
+    
+    .footer{
+        position: relative;
+        background-color: #3e3e3e;
+        height: 300px;
+        width: 100%;
+    }
+    
+    .footer img{
+        height: 20px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .footer > ul{
+        list-style-type: none;
+        margin: 0;
+    }
+    
+    .footer > ul > li > a > svg{
+        height: 20px;
+        fill: #FFF;
+    }
+    
+    .footer > ul > li > a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        color: #FFF;
+        line-height: 35px;
+        font-size: 18px;
+        text-decoration: none;
+    }
 }

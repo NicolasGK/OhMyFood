@@ -247,7 +247,8 @@ h2{
 .restaurants{
     margin-top: 100px;
     background-color: rgb(247, 247, 247);
-    height: 1450px;
+    height: 100%;
+    padding-bottom: 100px;
 }
 
 .restaurants h2{
@@ -271,16 +272,17 @@ h2{
     width: 100%;
 }
 
-.palette-image p{
+.container-palette .new{
     position: absolute;
-    top: 1100px;
-    right: 13%;
+    margin: 15px -400px 0 0;
     text-decoration: none;
     font-weight: 500;
     color: #307765;
     background-color: #99E2D0;
-    padding: 10px;
+    padding: 0;
     border-radius: 3px;
+    width: 100px;
+    text-align: center;
 }
 
 .palette-image img{
@@ -369,16 +371,17 @@ h2{
     width: 100%;
 }
 
-.note-image p{
+.container-note .new{
     position: absolute;
-    top: 1418px;
-    right: 13%;
+    margin: 15px -400px 0 0;
     text-decoration: none;
     font-weight: 500;
     color: #307765;
     background-color: #99E2D0;
-    padding: 10px;
+    padding: 0;
     border-radius: 3px;
+    width: 100px;
+    text-align: center;
 }
 
 .note-image img{
@@ -832,22 +835,31 @@ h2{
     .restaurants{
         margin-top: 100px;
         background-color: rgb(247, 247, 247);
-        height: 1450px;
+        height: 100%;
+        padding-bottom: 100px;
     }
     
     .restaurants h2{
         padding-top: 70px;
     }
-    
-    .container-palette{
-        width: 100%;
+
+    .containers{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
     
+    .container-palette{
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
     .container-palette > div{
-        width: 80%;
+        width: 92%;
     }
     
     .palette-image{
@@ -856,16 +868,17 @@ h2{
         width: 100%;
     }
     
-    .palette-image p{
+    .container-palette .new{
         position: absolute;
-        top: 900px;
-        right: 13%;
+        margin: 15px -400px 0 0;
         text-decoration: none;
         font-weight: 500;
         color: #307765;
         background-color: #99E2D0;
-        padding: 10px;
+        padding: 0;
         border-radius: 3px;
+        width: 100px;
+        text-align: center;
     }
     
     .palette-image img{
@@ -937,7 +950,7 @@ h2{
     }
     
     .container-note{
-        width: 100%;
+        width: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -945,7 +958,7 @@ h2{
     }
     
     .container-note > div{
-        width: 80%;
+        width: 92%;
     }
     
     .note-image{
@@ -954,16 +967,17 @@ h2{
         width: 100%;
     }
     
-    .note-image p{
+    .container-note .new{
         position: absolute;
-        top: 1210px;
-        right: 13%;
+        margin: 15px -400px 0 0;
         text-decoration: none;
         font-weight: 500;
         color: #307765;
         background-color: #99E2D0;
-        padding: 10px;
+        padding: 0;
         border-radius: 3px;
+        width: 100px;
+        text-align: center;
     }
     
     .note-image img{
@@ -1003,7 +1017,7 @@ h2{
     
     
     .container-francaise{
-        width: 100%;
+        width: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1011,7 +1025,7 @@ h2{
     }
     
     .container-francaise > div{
-        width: 80%;
+        width: 92%;
     }
     
     .francaise-image{
@@ -1069,7 +1083,7 @@ h2{
     }
     
     .container-sens{
-        width: 100%;
+        width: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1077,7 +1091,7 @@ h2{
     }
     
     .container-sens > div{
-        width: 80%;
+        width: 92%;
     }
     
     .sens-image{
