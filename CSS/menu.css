@@ -218,10 +218,7 @@ h2{
     animation-duration: 1s;
     animation: spin 1s ease-in-out both;
 }
-.check:hover{
-    animation-fill-mode: forwards; 
-    transform: rotate(180deg);
-}
+
 .check svg{
     height: 40px;
     fill: white;
@@ -236,7 +233,7 @@ h2{
     text-overflow: ellipsis;
     transition: all 0.2s ease-in;
 }
-.container-entrees-1 .tartare:hover{
+.container-entrees-1:hover .tartare{
     min-width: 80%;
 }
 .container-entrees-1:hover .check-picto{
@@ -248,13 +245,11 @@ h2{
 .container-entrees-1 .check:hover{
     animation: spin 2s ease-in-out;
 }
-.container-entrees-1 .check-picto:hover{
-    animation: spin 2s ease-in-out;
-}
+
 .tartare{
     width: 100%;
     padding: 10px;
-    line-height: 0px;
+    line-height: 1;
 }
 
 
@@ -321,7 +316,7 @@ h2{
     text-overflow: ellipsis;
     transition: all 0.2s ease-in;
 }
-.container-entrees-2 .tartare:hover{
+.container-entrees-2:hover .tartare{
     min-width: 80%;
 }
 .container-entrees-2:hover .check-picto{
@@ -331,9 +326,6 @@ h2{
     animation-play-state: running;
 }
 .container-entrees-2 .check:hover{
-    animation: spin 2s ease-in-out;
-}
-.container-entrees-2 .check-picto:hover{
     animation: spin 2s ease-in-out;
 }
 
@@ -361,7 +353,7 @@ h2{
     text-overflow: ellipsis;
     transition: all 0.2s ease-in;
 }
-.container-entrees-3 .tartare:hover{
+.container-entrees-3:hover .tartare{
     min-width: 80%;
 }
 .container-entrees-3:hover .check-picto{
@@ -371,9 +363,6 @@ h2{
     animation-play-state: running;
 }
 .container-entrees-3 .check:hover{
-    animation: spin 2s ease-in-out;
-}
-.container-entrees-3 .check-picto:hover{
     animation: spin 2s ease-in-out;
 }
 
@@ -391,9 +380,12 @@ h2{
     text-overflow: ellipsis;
     margin-right: 28px;
 }
-.texte-price p{
-    margin: 8px 0 15px 0;
+.texte-price p:not(:last-child){
+    margin: 19px 0 15px 0;
     font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .button-bot button{
@@ -650,10 +642,6 @@ h2{
         animation-duration: 1s;
         animation: spin 1s ease-in-out both;
     }
-    .check:hover{
-        animation-fill-mode: forwards; 
-        transform: rotate(180deg);
-    }
     .check svg{
         height: 40px;
         fill: white;
@@ -668,7 +656,7 @@ h2{
         text-overflow: ellipsis;
         transition: all 0.2s ease-in;
     }
-    .container-entrees-1 .tartare:hover{
+    .container-entrees-1:hover .tartare{
         min-width: 80%;
     }
     .container-entrees-1:hover .check-picto{
@@ -680,13 +668,11 @@ h2{
     .container-entrees-1 .check:hover{
         animation: spin 2s ease-in-out;
     }
-    .container-entrees-1 .check-picto:hover{
-        animation: spin 2s ease-in-out;
-    }
+    
     .tartare{
         width: 100%;
         padding: 10px;
-        line-height: 0px;
+        line-height: 1;
     }
     
     
@@ -753,7 +739,7 @@ h2{
         text-overflow: ellipsis;
         transition: all 0.2s ease-in;
     }
-    .container-entrees-2 .tartare:hover{
+    .container-entrees-2:hover .tartare{
         min-width: 80%;
     }
     .container-entrees-2:hover .check-picto{
@@ -763,9 +749,6 @@ h2{
         animation-play-state: running;
     }
     .container-entrees-2 .check:hover{
-        animation: spin 2s ease-in-out;
-    }
-    .container-entrees-2 .check-picto:hover{
         animation: spin 2s ease-in-out;
     }
     
@@ -793,7 +776,7 @@ h2{
         text-overflow: ellipsis;
         transition: all 0.2s ease-in;
     }
-    .container-entrees-3 .tartare:hover{
+    .container-entrees-3:hover .tartare{
         min-width: 80%;
     }
     .container-entrees-3:hover .check-picto{
@@ -803,9 +786,6 @@ h2{
         animation-play-state: running;
     }
     .container-entrees-3 .check:hover{
-        animation: spin 2s ease-in-out;
-    }
-    .container-entrees-3 .check-picto:hover{
         animation: spin 2s ease-in-out;
     }
     
@@ -823,9 +803,12 @@ h2{
         text-overflow: ellipsis;
         margin-right: 28px;
     }
-    .texte-price p{
-        margin: 8px 0 15px 0;
+    .texte-price p:not(:last-child){
+        margin: 19px 0 15px 0;
         font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     
     .button-bot button{
