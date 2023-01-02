@@ -439,6 +439,7 @@ h2{
 }
 
 .francaise-image p{
+    display: none;
     position: absolute;
     top: 1418px;
     right: 13%;
