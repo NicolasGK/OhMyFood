@@ -440,8 +440,7 @@ h2{
 
 .francaise-image p{
     display: none;
-    position: absolute;
-    top: 1418px;
+    
     right: 13%;
     text-decoration: none;
     font-weight: 500;
@@ -505,6 +504,7 @@ h2{
 }
 
 .sens-image p{
+    display: none;
     position: absolute;
     top: 1418px;
     right: 13%;
@@ -1036,6 +1036,7 @@ h2{
     }
     
     .francaise-image p{
+        display: none;
         position: absolute;
         top: 1418px;
         display: none;
@@ -1102,6 +1103,7 @@ h2{
     }
     
     .sens-image p{
+        display: none;
         position: absolute;
         top: 1518px;
         display: none;
