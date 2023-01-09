@@ -368,6 +368,9 @@ h2{
 
 .tartare p{
     font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .texte-price{
@@ -791,6 +794,9 @@ h2{
     
     .tartare p{
         font-size: 18px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     
     .texte-price{
