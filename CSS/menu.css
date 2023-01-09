@@ -134,21 +134,21 @@ body{
 .entree{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 103%;
     align-items: center;
 }
 
 .plat{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 103%;
     align-items: center;
 }
 
 .dessert{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 103%;
     align-items: center;
 }
 
@@ -252,6 +252,8 @@ h2{
     width: 100%;
     padding: 10px;
     line-height: 1;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 
@@ -368,11 +370,15 @@ h2{
     animation: spin 2s ease-in-out;
 }
 
-.tartare p{
+.tartare p:not(:last-child){
     font-size: 18px;
-    overflow: hidden;
     white-space: nowrap;
+    padding-right: 10px;
+    overflow: hidden;
     text-overflow: ellipsis;
+    margin-block-start: 11px;
+    margin-block-end: 11px;
+    line-height: 1.2;
 }
 
 .texte-price{
@@ -383,7 +389,7 @@ h2{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-right: 28px;
+    margin-right: 20px;
 }
 .texte-price p:not(:last-child){
     margin: 19px 0 15px 0;
@@ -391,6 +397,12 @@ h2{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-block-start: 0;
+}
+
+.texte-price p:last-child{
+    margin-block-start: 0;
+    margin-bottom: 0;
 }
 
 .button-bot button{
@@ -680,6 +692,8 @@ h2{
         width: 100%;
         padding: 10px;
         line-height: 1;
+        padding-bottom: 0;
+        padding-top: 0;
     }
     
     
@@ -796,11 +810,15 @@ h2{
         animation: spin 2s ease-in-out;
     }
     
-    .tartare p{
+    .tartare p:not(:last-child){
         font-size: 18px;
-        overflow: hidden;
         white-space: nowrap;
+        padding-right: 10px;
+        overflow: hidden;
         text-overflow: ellipsis;
+        margin-block-start: 11px;
+        margin-block-end: 11px;
+        line-height: 1.2;
     }
     
     .texte-price{
@@ -811,14 +829,18 @@ h2{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin-right: 28px;
+        margin-right: 20px;
     }
     .texte-price p:not(:last-child){
-        margin: 19px 0 15px 0;
+        margin: 0px 0 15px 0;
         font-size: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    .texte-price p:last-child{
+        margin-block-start: 0;
     }
     
     .button-bot button{
